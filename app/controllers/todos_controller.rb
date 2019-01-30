@@ -33,6 +33,10 @@ class TodosController < ApplicationController
     @todos.save
     redirect_to root_path
   end
+  def list
+    @completed = Todo.where(completed: true)
+    @incomplete = Todo.where(completed: false)
+  end
   private
   def todos_params
     params.require(:todo).permit(:description)
