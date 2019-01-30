@@ -1,7 +1,12 @@
 <h1>Edit</h1>
 
-<%=form_with(model: @todos, local: true) do |f|%>
-  <%= f.label :description%>
-  <%= f.text_field :description%>
-  <%= f.submit 'Editar'%>
-<% end %>
+<div class="row">
+  <div class="col col-md-6">
+    <%=form_with(model: @todos, local: true) do |f|%>
+      <%= f.label :description%>
+      <%= f.text_field :description, class:'form-control'%>
+      <%= f.submit 'Editar',class:'btn btn-success'%>
+    <% end %>
+  </div>
+
+</div>
