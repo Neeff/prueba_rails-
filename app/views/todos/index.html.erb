@@ -8,6 +8,7 @@
   <li class="list-group-item"><%= item.description%>
   <%= link_to 'Show',todo_path(item.id),class:'btn btn-success'%>
   <%= link_to 'Edit',edit_todo_path(item.id),class:'btn btn-warning'%>
+  <%= link_to 'Delete',delete_todo_path(item.id),method: :delete ,class:'btn btn-danger'%>
   </li>
   <% end %>
 </ul>
